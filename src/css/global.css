@@ -444,6 +444,21 @@ video {
   display: none;
 }
 
+h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+body {
+  overflow: hidden;
+  font-family: 'IBM Plex Sans', sans-serif;
+  height: 100dvh;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -544,6 +559,135 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.text-\[3rem\] {
-  font-size: 3rem;
+.scroll-container {
+  display: flex;
+  height: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  scroll-behavior: auto;
+}
+
+.header-main {
+  display: flex;
+  gap: 2rem;
+}
+
+.header-main__nav {
+  display: grid;
+  min-height: 400px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.header-main__nav-item {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+  padding: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.row-span-3 {
+  grid-row: span 3 / span 3;
+}
+
+.-ml-\[\.5rem\] {
+  margin-left: -.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.min-w-\[100dvw\] {
+  min-width: 100dvw;
+}
+
+.min-w-full {
+  min-width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-\[1rem\] {
+  gap: 1rem;
+}
+
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.p-\[\.5rem\] {
+  padding: .5rem;
+}
+
+.p-\[1rem\] {
+  padding: 1rem;
+}
+
+.px-\[1rem\] {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.pl-\[\.5rem\] {
+  padding-left: .5rem;
+}
+
+.text-\[2rem\] {
+  font-size: 2rem;
+}
+
+.text-\[4rem\] {
+  font-size: 4rem;
+}
+
+.text-gray-50 {
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-\[7rem\] {
+    font-size: 7rem;
+  }
 }

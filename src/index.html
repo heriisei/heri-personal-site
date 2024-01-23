@@ -5,12 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello 👋 | Heri R</title>
     <link rel="stylesheet" href="/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400;700&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>
-            Heri R
-        </h1>
-    </header>
+    <div class="scroll-container">
+        <header class="header-main">
+            <div class="min-w-[100dvw] flex flex-col justify-center">
+                <h1 class="text-[4rem] lg:text-[7rem] pl-[.5rem]">
+                    Heri R.
+                </h1>
+                <div class="header-main__desc flex flex-col gap-[1rem] w-max pl-[.5rem]">
+                    <p class="text-[2rem]">
+                    </p>
+                    <button class="w-max p-[.5rem] -ml-[.5rem]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" fill="none" stroke="none" /><path fill="currentColor" d="M16 2h-2v2h2v2H4v2H2v5h2V8h12v2h-2v2h2v-2h2V8h2V6h-2V4h-2zM6 20h2v2h2v-2H8v-2h12v-2h2v-5h-2v5H8v-2h2v-2H8v2H6v2H4v2h2z"/></svg>
+                        <span class="sr-only">
+                            Cycle
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <nav class="min-w-[100dvw] px-[1rem]">
+                <ul class="header-main__nav">
+                    <li class="header-main__nav-item row-span-2">
+                        <a href="#about">
+                            about
+                        </a>
+                    </li>
+                    <li class="header-main__nav-item row-span-3">
+                        <a href="#experience">
+                            experience
+                        </a>
+                    </li>
+                    <li class="header-main__nav-item row-span-3">
+                        <a href="#gallery">
+                            gallery
+                        </a>
+                    </li>
+                    <li class="header-main__nav-item row-span-2">
+                        <a href="#foot-print">
+                            fooot print
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex flex-nowrap min-w-full">
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima suscipit illum perferendis, temporibus molestiae voluptas sapiente veritatis sit sed autem.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima suscipit illum perferendis, temporibus molestiae voluptas sapiente veritatis sit sed autem.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima suscipit illum perferendis, temporibus molestiae voluptas sapiente veritatis sit sed autem.
+            </div>
+        </main>
+    </div>
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/header.js"></script>
 </body>
 </html>

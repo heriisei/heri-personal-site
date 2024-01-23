@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'IBM Plex Mono', monospace;
+    }
+
+    body {
+        overflow: hidden;
+        font-family: 'IBM Plex Sans', sans-serif;
+        height: 100dvh;
+    }
+}
+
+@layer components {
+    .scroll-container {
+        @apply overflow-x-scroll overflow-y-hidden flex flex-nowrap items-center py-[1rem] px-[2rem] h-full;
+        scroll-behavior: auto;
+    }
+
+    .header-main {
+        @apply flex gap-[2rem];
+    }
+
+    .header-main__nav {
+        @apply grid grid-cols-2 grid-rows-5 gap-[2rem] min-h-[400px];
+    }
+
+    .header-main__nav-item {
+        @apply p-[1rem] text-gray-50 bg-gray-500;
+    }
+}
