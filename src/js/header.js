@@ -1,3 +1,4 @@
+// SECTION - Hero section description element
 const headerDescTextEl = document.querySelector('.header-main__desc p')
 
 const headerDescItems = [
@@ -24,3 +25,5 @@ renderHeaderDesc()
 const headerDescBtnEl = document.querySelector('.header-main__desc button')
 
 headerDescBtnEl.addEventListener('click', () => renderHeaderDesc())
+
+// !SECTION

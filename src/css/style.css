@@ -17,11 +17,15 @@
         font-family: 'IBM Plex Sans', sans-serif;
         height: 100dvh;
     }
+
+    h3 {
+        @apply font-[700];
+    }
 }
 
 @layer components {
     .scroll-container {
-        @apply overflow-x-scroll overflow-y-hidden flex flex-nowrap items-center py-[1rem] px-[2rem] h-full;
+        @apply overflow-x-scroll overflow-y-hidden flex flex-nowrap gap-[2rem] items-center py-[1rem] px-[2rem] h-full;
         scroll-behavior: auto;
     }
 
@@ -34,6 +38,66 @@
     }
 
     .header-main__nav-item {
-        @apply p-[1rem] text-gray-50 bg-gray-500;
+        @apply relative text-gray-50 bg-gray-500 hover:bg-indigo-800 focus-within:bg-indigo-800 cursor-pointer;
+    }
+
+    .header-main__nav-item a {
+        @apply relative flex w-full h-full p-[1rem] text-[1.5rem] font-[100];
+    }
+
+    .header-main__nav-item .decorative {
+        @apply absolute top-0 left-0 w-full h-full flex justify-end items-end;
+    }
+
+    .header-main__nav-item .decorative svg {
+        @apply absolute w-[5rem] h-[5rem];
+    }
+
+    .header-main__nav-item .decorative svg.deco__b {
+        opacity: 0;
+    }
+
+    .header-main__nav-item:hover .decorative svg.deco__a,
+    .header-main__nav-item:focus-within .decorative svg.deco__a {
+        animation: pulse__a 1.5s steps(1) infinite;
+    }
+
+    .header-main__nav-item:hover .decorative svg.deco__b,
+    .header-main__nav-item:focus-within .decorative svg.deco__b {
+        animation: pulse__b 1.5s steps(1) infinite;
+    }
+
+    .container {
+        @apply flex gap-[2rem];
+    }
+
+    .container section {
+        @apply relative h-[80dvh] min-w-[414px] w-[100vw] bg-gray-100 p-[2rem];
+    }
+
+    .container section h2 {
+        @apply absolute -top-[3rem] left-[1rem] text-[3rem] font-[100];
+    }
+
+    .container section.about {
+        @apply max-w-[640px];
+    }
+}
+
+@keyframes pulse__a {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes pulse__b {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
     }
 }
