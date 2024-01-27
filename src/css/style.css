@@ -33,6 +33,16 @@
         @apply flex gap-[2rem];
     }
 
+    @media screen and (min-width: 768px) {
+        .header-main > div {
+            min-width: calc(52dvw - 3rem); 
+        }
+        .header-main > nav {
+           min-width: calc(48dvw - 3rem);
+        }
+    }
+
+
     .header-main__nav {
         @apply grid grid-cols-2 grid-rows-5 gap-[2rem] min-h-[400px];
     }
@@ -59,12 +69,12 @@
 
     .header-main__nav-item:hover .decorative svg.deco__a,
     .header-main__nav-item:focus-within .decorative svg.deco__a {
-        animation: pulse__a 1.5s steps(1) infinite;
+        animation: pulse__a .75s steps(1) infinite;
     }
 
     .header-main__nav-item:hover .decorative svg.deco__b,
     .header-main__nav-item:focus-within .decorative svg.deco__b {
-        animation: pulse__b 1.5s steps(1) infinite;
+        animation: pulse__b .75s steps(1) infinite;
     }
 
     .container {
@@ -72,15 +82,143 @@
     }
 
     .container section {
-        @apply relative h-[80dvh] min-w-[414px] w-[100vw] bg-gray-100 p-[2rem];
+        @apply relative h-[80dvh] min-w-[414px] w-[100vw] p-[2rem];
     }
 
     .container section h2 {
         @apply absolute -top-[3rem] left-[1rem] text-[3rem] font-[100];
     }
 
-    .container section.about {
+    .container section#about {
         @apply max-w-[640px];
+    }
+
+    #experience {
+        @apply flex flex-col
+    }
+
+    .section-content__experience  {
+        @apply flex flex-col pl-[.5rem];
+    }
+
+    .section-content__experience article {
+        @apply relative pl-[1rem];
+        border-left: 2px solid #434343;
+    }
+
+    .section-content__experience article::before {
+        content: '';
+        position: absolute;
+        top: 0rem;
+        left: -.5rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: rgb(55, 48, 163);
+        transition: top .25s linear;
+    }
+
+    .section-content__experience article:hover::before {
+        top: .25rem;
+    }
+
+    .section-content__experience .deco-timeline {
+        @apply h-[3rem] pl-[1rem];
+        border-left: 2px dashed #989898;
+    }
+
+    .section-content__experience-scroller {
+        @apply h-full flex flex-col justify-center gap-[1rem] overflow-hidden;
+    }
+
+    .section-content__experience .experience__scroller {
+        @apply max-w-full;
+    }
+
+    .experience__scroller[data-animated="true"] {
+        overflow: hidden;
+        -webkit-mask: linear-gradient(
+          90deg,
+          transparent,
+          white 20%,
+          white 80%,
+          transparent
+        );
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    }
+
+    .skill__list {
+        @apply flex flex-wrap gap-[1rem] px-[1rem];
+    }
+
+    .experience__scroller[data-direction="forwards"] {
+        --experience-scroller__direction: forwards;
+    }
+
+    .experience__scroller[data-direction="reverse"] {
+        --experience-scroller__direction: reverse;
+    }
+
+    .experience__scroller[data-animated="true"] .skill__list {
+        width: max-content;
+        flex-wrap: nowrap;
+        animation: scroll 20s var(--experience-scroller__direction) linear infinite;
+    }
+
+    .skill__item {
+        @apply text-[1rem] text-gray-50 py-[.5rem] px-[1rem] bg-indigo-800;
+    }
+      
+
+    #gallery {
+        @apply min-w-max;
+    }
+
+    .section-content__gallery {
+        @apply h-full;
+    }
+
+    .section-content__gallery ul {
+        @apply flex flex-col flex-wrap h-full w-full aspect-square;
+    }
+
+    .section-content__gallery ul li {
+        height: calc(100% / 3);
+        width: max-content;
+        aspect-ratio: 1 / 1;
+        flex: 1;
+    }
+
+    .gallery-item.preview {
+        @apply absolute top-0 left-0 w-full h-full;
+    }
+
+    .gallery-item.preview figure {
+        @apply relative;
+    }
+
+    .gallery-item.preview figure figcaption {
+        @apply absolute bottom-0 left-0 w-full bg-indigo-800 h-max min-h-[1.5rem] text-gray-50 text-[1.5rem] text-center;
+    }
+
+    .section-content__gallery ul li img {
+        @apply w-full h-full object-cover;
+    }
+
+    .section-content__gallery {
+        @apply relative;
+    }
+
+    #foot-print {
+        margin-right: 2rem;
+    }
+
+    #map {
+        position: absolute; top: 0; bottom: 0; width: 100%;
+    }
+
+    .section-content__map {
+        @apply relative;
     }
 }
 
@@ -101,3 +239,9 @@
         opacity: 1;
     }
 }
+
+@keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }

@@ -1,4 +1,7 @@
 import './header.js'
+import './experience.js'
+import './gallery.js'
+import './footprint.js'
 
 document.addEventListener('wheel', (e) => {
     const postList = document.querySelector('.scroll-container')
