@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello 👋 | Heri R</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400;700&family=IBM+Plex+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    <div class="scroll-container">
+        <header class="header-main">
+            <div class="min-w-[100dvw] flex flex-col justify-center">
+                <h1 class="text-[4rem] lg:text-[7rem] pl-[.5rem]">
+                    Heri R.
+                </h1>
+                <div class="header-main__desc flex flex-col gap-[1rem] w-max pl-[.5rem]">
+                    <p class="text-[2rem] font-[100]">
+                    </p>
+                    <button class="w-max p-[.5rem] -ml-[.5rem] w-[40px] h-[40px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" fill="none" stroke="none" /><path fill="currentColor" d="M16 2h-2v2h2v2H4v2H2v5h2V8h12v2h-2v2h2v-2h2V8h2V6h-2V4h-2zM6 20h2v2h2v-2H8v-2h12v-2h2v-5h-2v5H8v-2h2v-2H8v2H6v2H4v2h2z"/></svg>
+                        <span class="sr-only">
+                            Cycle
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <nav class="min-w-[100vw] px-[1rem] md:px-[0]">
+                <ul class="header-main__nav">
+                    <li class="header-main__nav-item row-span-2">
+                        <canvas id="confetti-canvas" class="absolute w-full h-full"></canvas>
+                        <div class="decorative">
+                            <svg class="deco__a" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10 2h4v4h-4zM7 7h10v2h-2v13h-2v-6h-2v6H9V9H7zM5 5v2h2V5zm0 0H3V3h2zm14 0v2h-2V5zm0 0V3h2v2z"/></svg>
+                            <svg class="deco__b" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10 2h4v4h-4zM3 7h18v2h-6v13h-2v-6h-2v6H9V9H3z"/></svg>
+                        </div>
+                        <a href="#about">
+                            about
+                        </a>
+                    </li>
+                    <li class="header-main__nav-item row-span-3">
+                        <div class="decorative">
+                            <svg class="deco__a" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" fill="none" stroke="none" /><path fill="currentColor" d="M6 2h8v2h-2v2h-2V4H6zM4 6V4h2v2zm0 10H2V6h2zm2 2H4v-2h2zm2 2H6v-2h2zm10 0v2H8v-2zm2-2v2h-2v-2zm-2-4v-2h2v-2h2v8h-2v-4zm-6 0h6v2h-6zm-2-2h2v2h-2zm0 0V6H8v6zm8-10h2v2h2v2h-2v2h-2V6h-2V4h2z"/></svg>
+                            <svg class="deco__b" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 0h2v2h2v2h-2v2h-2V4h-2V2h2zM8 4h8v2h-2v2h-2V6H8zM6 8V6h2v2zm0 8H4V8h2zm2 2H6v-2h2zm8 0v2H8v-2zm2-2v2h-2v-2zm-2-4v-2h2V8h2v8h-2v-4zm-4 0h4v2h-4zm0 0V8h-2v4zm-8 6H2v2H0v2h2v2h2v-2h2v-2H4z"/></svg>
+                        </div>
+                        <a href="#experience">
+                            experience
+                        </a>
+                    </li>
+                    <li class="header-main__nav-item row-span-3">
+                        <div class="decorative">
+                            <svg class="deco__a" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" fill="none" stroke="none" /><path fill="currentColor" d="M9 3H7v2H2v16h20V5h-5V3zm8 4h3v12H4V7h5V5h6v2zm-7 2h4v2h-4zm4 6h-4v2h4zh2v-4h-2zm-6-4h2v4H8z"/></svg>
+                            <svg class="deco__b" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 2H3v3H0v2h3v3h2V7h3V5H5zm12 1h-7v2h5v2h5v12H5v-7H3v9h19V5h-5zm-7 6h4v2h2v4h-2v2h-4v-2h4v-4h-4zm-2 2h2v4H8z"/></svg>
+                        </div>
+                        <a href="#gallery">
+                            gallery
+                        </a>
+                    </li>
+                    <li class="header-main__nav-item row-span-2">
+                        <div class="decorative">
+                            <svg class="deco__a" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" fill="none" stroke="none" /><path fill="currentColor" d="M4 11v2h12v2h2v-2h2v-2h-2V9h-2v2zm10-4h2v2h-2zm0 0h-2V5h2zm0 10h2v-2h-2zm0 0h-2v2h2z"/></svg>
+                            <svg class="deco__b" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 20h2V8h2V6h-2V4h-2v2H9v2h2zM7 10V8h2v2zm0 0v2H5v-2zm10 0V8h-2v2zm0 0v2h2v-2z"/></svg>
+                        </div>
+                        <a href="#foot-print">
+                            foot print
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container flex flex-nowrap min-w-full">
+            <section id="about">
+                <h2>
+                    about
+                </h2>
+                <div class="relative h-full">
+                    <p>
+                        I'm <strong>Heri Risnanto</strong>, a <i>full-stack</i> web developer with more than two years of experience in the professional web development field that focuses on the front-end side, with additional experience in back-end API service development, including full-time, part-time, freelance, and mentoring jobs.
+                    </p>
+                    <img class="absolute bottom-0 right-0 grayscale" src="/images/photo-avatar.webp" alt="heri's avatar image">
+                </div>
+            </section>
+            <section id="experience">
+                <h2>
+                    experience
+                </h2>
+                <div class="section-content__experience">
+                    <article>
+                        <h3>
+                            Frontend Web Developer
+                        </h3>
+                        <p>
+                            2023 - Present
+                        </p>
+                    </article>
+                    <div class="deco-timeline"></div>
+                    <article>
+                        <h3>
+                            Web Developer
+                        </h3>
+                        <p>
+                            2020 - 2023
+                        </p>
+                    </article>
+                    <div class="deco-timeline"></div>
+                    <article>
+                        <h3>
+                            Frontend Engineer
+                        </h3>
+                        <p>
+                            2020 - 2022
+                        </p>
+                    </article>
+                </div>
+                <div class="section-content__experience-scroller">
+                    <!-- <div class="experience__scroller" data-speed="fast">
+                    </div> -->
+                </div>
+            </section>
+            <section id="gallery">
+                <h2>
+                    gallery
+                </h2>
+                <div class="section-content__gallery">
+                </div>
+            </section>
+            <section id="foot-print">
+                <h2>
+                    foot print
+                </h2>
+                <div class="section-content__map h-full w-full">
+                    <div id="map"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>
