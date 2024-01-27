@@ -123,7 +123,6 @@ const footPrints = {
 }
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
-console.log(import.meta.env.VITE_MAPBOX_TOKEN)
 const map = new mapboxgl.Map({
 	container: 'map', // container ID
 	style: 'mapbox://styles/mapbox/streets-v12', // style URL

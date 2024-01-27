@@ -11,7 +11,6 @@ document.addEventListener('wheel', (e) => {
 function executeScroll(idHash) {
     const targetEl = document.getElementById(idHash)
     if (targetEl) {
-        console.log(targetEl)
         targetEl.scrollIntoView({ inline: 'start', behavior: 'smooth' })
     }
         
